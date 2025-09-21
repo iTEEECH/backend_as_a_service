@@ -6,21 +6,46 @@ part of 'amplify_service.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$amplifyAuthHash() => r'93682a2827a2923643fc3999bb20882b79607933';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [amplifyAuth].
 @ProviderFor(amplifyAuth)
-final amplifyAuthProvider = Provider<AmplifyClass>.internal(
-  amplifyAuth,
-  name: r'amplifyAuthProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$amplifyAuthHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+const amplifyAuthProvider = AmplifyAuthProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef AmplifyAuthRef = ProviderRef<AmplifyClass>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class AmplifyAuthProvider
+    extends $FunctionalProvider<AmplifyClass, AmplifyClass, AmplifyClass>
+    with $Provider<AmplifyClass> {
+  const AmplifyAuthProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'amplifyAuthProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$amplifyAuthHash();
+
+  @$internal
+  @override
+  $ProviderElement<AmplifyClass> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  AmplifyClass create(Ref ref) {
+    return amplifyAuth(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AmplifyClass value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<AmplifyClass>(value),
+    );
+  }
+}
+
+String _$amplifyAuthHash() => r'93682a2827a2923643fc3999bb20882b79607933';

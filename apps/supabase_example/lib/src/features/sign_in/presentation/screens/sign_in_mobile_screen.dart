@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:supabase_example/src/features/sign_in/presentation/widgets/sign_in_body.dart';
 import 'package:flutter/material.dart';

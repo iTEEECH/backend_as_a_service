@@ -5,7 +5,6 @@ import 'package:amplify_example/src/features/home/home.dart';
 import 'package:amplify_example/src/features/sign_in/sign_in.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 
@@ -26,7 +25,7 @@ Raw<GoRouter> router(Ref ref) {
         return RouteLocation.login;
       }
 
-      final bool isAuthenticated = authenticationState.valueOrNull?.isSignedIn ?? false;
+      final bool isAuthenticated = authenticationState.value?.isSignedIn ?? false;
 
       if (state.matchedLocation == RouteLocation.login) {
         isAuthenticated ? RouteName.home : null;

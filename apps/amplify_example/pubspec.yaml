@@ -1,10 +1,12 @@
 name: amplify_example
-description: "Example of Amplify."
-publish_to: 'none'
+description: Example of Amplify.
+publish_to: none
 version: 1.0.0
 
 environment:
-  sdk: ^3.6.1
+  sdk: ^3.9.0
+
+resolution: workspace
 
 dependencies:
   flutter:
@@ -13,32 +15,32 @@ dependencies:
     sdk: flutter
 
   # https://pub.dev/packages/amplify_auth_cognito
-  amplify_auth_cognito: 2.6.1
+  amplify_auth_cognito: 2.6.5
   # https://pub.dev/packages/amplify_flutter
-  amplify_flutter: 2.6.1
+  amplify_flutter: 2.6.5
   # https://pub.dev/packages/analyzer
-  analyzer: 7.0.0
+  analyzer: 7.6.0
   # https://pub.dev/packages/equatable
   equatable: 2.0.7
   # https://pub.dev/packages/flutter_hooks
-  flutter_hooks: 0.21.2
+  flutter_hooks: 0.21.3+1
   # https://pub.dev/packages/go_router
-  go_router: 14.8.1
+  go_router: 16.2.2
   # https://pub.dev/packages/hooks_riverpod
-  hooks_riverpod: 2.6.1
+  hooks_riverpod: 3.0.0
   # https://pub.dev/packages/riverpod_annotation
-  riverpod_annotation: 2.6.1
+  riverpod_annotation: 3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # https://pub.dev/packages/build_runner
-  build_runner: 2.4.15
+  build_runner: 2.7.0
   # https://pub.dev/packages/flutter_lints
-  flutter_lints: 5.0.0
+  flutter_lints: 6.0.0
   # https://pub.dev/packages/riverpod_generator
-  riverpod_generator: 2.6.5
+  riverpod_generator: 3.0.0
 
 # The following section is specific to Flutter packages.
 flutter:

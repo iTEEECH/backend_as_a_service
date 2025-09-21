@@ -6,22 +6,51 @@ part of 'authentication_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$authenticationControllerHash() =>
-    r'ea2292793a3cc239518e194b4832a846d7b96494';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [AuthenticationController].
 @ProviderFor(AuthenticationController)
-final authenticationControllerProvider = AutoDisposeStreamNotifierProvider<
-    AuthenticationController, AuthState?>.internal(
-  AuthenticationController.new,
-  name: r'authenticationControllerProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$authenticationControllerHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+const authenticationControllerProvider = AuthenticationControllerProvider._();
 
-typedef _$AuthenticationController = AutoDisposeStreamNotifier<AuthState?>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class AuthenticationControllerProvider
+    extends $StreamNotifierProvider<AuthenticationController, AuthState?> {
+  const AuthenticationControllerProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'authenticationControllerProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$authenticationControllerHash();
+
+  @$internal
+  @override
+  AuthenticationController create() => AuthenticationController();
+}
+
+String _$authenticationControllerHash() =>
+    r'446752eb6e1e08711e923a6f8ce342b9bde6ccbe';
+
+abstract class _$AuthenticationController extends $StreamNotifier<AuthState?> {
+  Stream<AuthState?> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build();
+    final ref = this.ref as $Ref<AsyncValue<AuthState?>, AuthState?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<AuthState?>, AuthState?>,
+              AsyncValue<AuthState?>,
+              Object?,
+              Object?
+            >;
+    element.handleValue(ref, created);
+  }
+}

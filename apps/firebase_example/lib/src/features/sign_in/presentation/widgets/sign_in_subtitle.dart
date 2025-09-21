@@ -1,4 +1,3 @@
-import 'package:firebase_example/src/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class SignInSubtitle extends StatelessWidget {

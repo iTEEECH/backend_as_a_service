@@ -5,7 +5,6 @@ import 'package:supabase_example/src/features/home/home.dart';
 import 'package:supabase_example/src/features/sign_in/sign_in.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -26,7 +25,7 @@ Raw<GoRouter> router(Ref ref) {
         return RouteLocation.login;
       }
 
-      final bool isAuthenticated = authenticationState.valueOrNull?.session != null;
+      final bool isAuthenticated = authenticationState.value?.session != null;
 
       if (state.matchedLocation == RouteLocation.login) {
         isAuthenticated ? RouteName.home : null;
@@ -43,7 +42,7 @@ Raw<GoRouter> router(Ref ref) {
             key: state.pageKey,
             child: HomePage(),
             transitionsBuilder:
-                (_, Animation<double> animation, __, Widget child) {
+                (_, Animation<double> animation, _, Widget child) {
               return FadeTransition(
                 opacity:
                     CurveTween(curve: Curves.easeInOutExpo).animate(animation),
@@ -61,7 +60,7 @@ Raw<GoRouter> router(Ref ref) {
             key: state.pageKey,
             child: SignInPage(),
             transitionsBuilder:
-                (_, Animation<double> animation, __, Widget child) {
+                (_, Animation<double> animation, _, Widget child) {
               return FadeTransition(
                 opacity:
                     CurveTween(curve: Curves.easeInOutExpo).animate(animation),

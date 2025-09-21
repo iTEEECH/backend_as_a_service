@@ -1,5 +1,4 @@
 import 'package:amplify_example/src/core/services/services.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 

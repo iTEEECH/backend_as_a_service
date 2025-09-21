@@ -1,6 +1,5 @@
 import 'package:appwrite/models.dart';
 import 'package:appwrite_example/src/core/services/services.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'authentication_controller.g.dart';

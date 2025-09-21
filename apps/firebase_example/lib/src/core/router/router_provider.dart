@@ -6,7 +6,6 @@ import 'package:firebase_example/src/features/home/home.dart';
 import 'package:firebase_example/src/features/sign_in/sign_in.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'router_provider.g.dart';
@@ -27,7 +26,7 @@ Raw<GoRouter> router(Ref ref) {
         return RouteLocation.login;
       }
 
-      final bool isAuthenticated = authenticationState.valueOrNull != null;
+      final bool isAuthenticated = authenticationState.value != null;
 
       if (state.matchedLocation == RouteLocation.login) {
         isAuthenticated ? RouteName.home : null;

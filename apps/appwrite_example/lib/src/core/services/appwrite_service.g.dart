@@ -6,40 +6,90 @@ part of 'appwrite_service.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(client)
+const clientProvider = ClientProvider._();
+
+final class ClientProvider extends $FunctionalProvider<Client, Client, Client>
+    with $Provider<Client> {
+  const ClientProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'clientProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$clientHash();
+
+  @$internal
+  @override
+  $ProviderElement<Client> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  Client create(Ref ref) {
+    return client(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Client value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Client>(value),
+    );
+  }
+}
+
 String _$clientHash() => r'd204d8661b4f52eb2c4bbe156ba7cbb39c1bcdce';
 
-/// See also [client].
-@ProviderFor(client)
-final clientProvider = Provider<Client>.internal(
-  client,
-  name: r'clientProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$clientHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef ClientRef = ProviderRef<Client>;
-String _$accountHash() => r'83f5dfc8cbcb6fcad494ada50202c93b163bec2c';
-
-/// See also [account].
 @ProviderFor(account)
-final accountProvider = Provider<Account>.internal(
-  account,
-  name: r'accountProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$accountHash,
-  dependencies: <ProviderOrFamily>[clientProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{
-    clientProvider,
-    ...?clientProvider.allTransitiveDependencies
-  },
-);
+const accountProvider = AccountProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef AccountRef = ProviderRef<Account>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class AccountProvider
+    extends $FunctionalProvider<Account, Account, Account>
+    with $Provider<Account> {
+  const AccountProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'accountProvider',
+        isAutoDispose: false,
+        dependencies: const <ProviderOrFamily>[clientProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[
+          AccountProvider.$allTransitiveDependencies0,
+        ],
+      );
+
+  static const $allTransitiveDependencies0 = clientProvider;
+
+  @override
+  String debugGetCreateSourceHash() => _$accountHash();
+
+  @$internal
+  @override
+  $ProviderElement<Account> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  Account create(Ref ref) {
+    return account(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(Account value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<Account>(value),
+    );
+  }
+}
+
+String _$accountHash() => r'83f5dfc8cbcb6fcad494ada50202c93b163bec2c';

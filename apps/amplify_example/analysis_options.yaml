@@ -21,7 +21,7 @@ analyzer:
     - build/**
 
 formatter:
-  page_width: 120.0
+  page_width: 120
 
 linter:
   rules:

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:amplify_example/src/core/utils/utils.dart';
 
 class SignInEmailField extends StatelessWidget {
   /// [controller] defines text controller for email field.
